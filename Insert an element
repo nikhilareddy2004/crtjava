@@ -65,38 +65,39 @@ Sample Output 2
 
 CODE:
 
-#include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include <stdlib.h>
+import java.io.*;
+import java.util.*;
 
-int main() {
-    int n;
-    scanf("%d",&n);
-    int a[n],i,p,ip;
-    for(i=0;i<n;i++)
-    {
-        scanf("%d",&a[i]);
-    }
-    scanf("%d",&p);
-    if(p>n)
-    {
-        printf("Invalid Input");
-    }
-    else
-    {
-        scanf("%d",&ip);      
-    for(i=0;i<p-1;i++)
-    {
-        printf("%d\n",a[i]);
-    }
-        if(i==p-1){
-            printf("%d\n",ip);
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n,i,p,ip;
+        n=s.nextInt();
+        int a[]=new int[n];
+        for(i=0;i<n;i++)
+        {
+            a[i]=s.nextInt();
         }
-    for(i=p-1;i<n;i++)
-    {
-        printf("%d\n",a[i]);
+        p=s.nextInt();
+        if(p>n)
+        {
+            System.out.printf("Invalid Input");
+        }
+        else
+        {
+        ip=s.nextInt();     
+        for(i=0;i<p-1;i++)
+        {
+            System.out.printf("%d\n",a[i]);
+        }
+        if(i==p-1){
+            System.out.printf("%d\n",ip);
+        }
+        for(i=p-1;i<n;i++)
+        {
+            System.out.printf("%d\n",a[i]);
+        }
     }
     }
-    return 0;
 }
